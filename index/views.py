@@ -23,6 +23,9 @@ def tabsJS(request):
 def jquerytabsJS(request):
     #return render_to_response('js/jquery-ui-personalized-1.5.2.packed.js', context_instance=RequestContext(request))   
     return HttpResponse(open('index/templates/js/jquery-ui-personalized-1.5.2.packed.js'))
+    
+def fuenteTTF(request):
+    return HttpResponse(open('index/templates/css/commersial_script.ttf'))
 
 def headGIF(request):
     return HttpResponse(open('index/templates/img/head.gif'))

@@ -1,4 +1,8 @@
 /*Proyecto: Fanfeando*/
+@font-face{
+	font-family: "commersial_script";
+	src: url(commersial_script.ttf);
+}
 body {
     font: 12px Verdana, Arial, Helvetica, sans-serif;
     background-color:#f2f2f2;
@@ -55,6 +59,7 @@ a:active {
 }
 /*Enzabezado*/
 #slogan{
+    font-family: "commersial_script";
     float:center;
     margin: 30px 100px 100 px 130px;
     height: 80px;
@@ -65,14 +70,14 @@ a:active {
     padding: 2px 0 0 4px; 
     font: bold 90% monospace;
     font-size: 13px; 
-    color: #555; 
+    color: #BDBDBD; 
 }
 #slogan h1{
     padding: 10px 0 0 4px;
-    font-size: 48px;
+    font-size: 54px;
     margin: 0;
     text-shadow: 1px 1px 1px #000;
-    color: #fff;
+    color: #F79F81;
 }
 /*Menu del encabezado*/
 #menu{
@@ -112,8 +117,8 @@ a:active {
     text-decoration: none;
     float: left;
 }
-#menu ul.topnav li a:hover{/*Al poner el mouse en elmenu se hace verde*/
-color:#80FF00;
+#menu ul.topnav li a:hover{/*Al poner el mouse en elmenu se hace verde muy verde*/
+    color:#F5BCA9;
     background: no-repeat center top;
 }
 .footer
