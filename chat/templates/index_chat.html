@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block titulo %} Chat! {% endblock %}
+{% block js %}
+    <script type='text/javascript'>
+        function focusIt(){
+          var usu = document.getElementById("usuario"); 
+          usu.focus(); 
+        }
+        onload = focusIt;
+    </script>
+{% endblock %}
+{% block contenido %}
+<ul class="tabnav"> <!--nombre de las columnas -->
+                <li><a href="#registro">Registro</a></li>
+        </ul>
+        <div id ='registro' class = 'tabdiv'>
+            <div id='formAjax'> 
+                <ul><br>
+                <h1>Introduce tu nombre de usuario para entrar a la sala.</h1><br><br>
+                <form class='formulario' method="post" action="ingresar/">
+                    <div><label>Usuario </label>
+                        <input type="text" name="usuario" id="usuario" value=''/>
+                    </div>
+                    <div style='text-align:right;' >
+                        <input type="submit" name="connect" id = 'connect' value="Enviar" />
+                    </div>
+                </form>
+                </ul>
+            </div>
+    </div>
+{% endblock %}

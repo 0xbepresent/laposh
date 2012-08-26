@@ -1,0 +1,124 @@
+/*Proyecto: Fanfeando*/
+body {
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    background-color:#f2f2f2;
+    text-align: justify;
+    color: #424242;
+}
+
+a {
+    font-size:12px;
+    color:#5E610B;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color:#38610B;
+}
+a:hover {
+    text-decoration: none;
+    color:#243B0B;
+}
+a:active {
+    text-decoration: none;
+    color:#0B610B;
+}
+#contenedor{
+    float: center;
+    background-color: #ffffff;
+    background: url(../head.gif) repeat-x;
+    width: auto;
+    height: auto;
+    margin: -30px -8px -8px -10px;
+}
+.principal
+{
+    width:auto;
+    height:auto;
+    background-color:#F2F2F2;
+    margin:0px 100px 10px 100px;
+    float:center;
+    padding:10px;
+}
+.principal h1{
+    font-size: 14px;
+    color: #2E2E2E;
+}
+.sesion-usuario{
+    /*padding:0px 0px 0px 1000px;*/
+    text-align: right;
+    /*float:right;*/
+    margin: 0px 60px 0px 0px;
+    font-weight: bold;
+}
+/*Enzabezado*/
+#slogan{
+    float:center;
+    margin: 30px 100px 100 px 130px;
+    height: 80px;
+    width: auto;
+}
+#slogan p 
+{ 
+    padding: 2px 0 0 4px; 
+    font: bold 90% monospace;
+    font-size: 13px; 
+    color: #555; 
+}
+#slogan h1{
+    padding: 10px 0 0 4px;
+    font-size: 48px;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000;
+    color: #fff;
+}
+/*Menu del encabezado*/
+#menu{
+    width: auto;
+    height: auto;
+    margin: -70px 0px 0px 800px;
+}
+#menu .container{
+    width:auto;
+    float:right;
+}
+#menu #header .disclaimer {
+    text-align: right;
+    position: absolute;
+    top: 0; right: 0;
+}
+#menu #header .disclaimer a { color: #ccc;}
+#menu ul.topnav { 
+    list-style: none;
+    padding: 0 20px;    
+    margin: 0;
+    width: auto; /*Medidor del menu*/
+    background: #222;
+    font-size: 11.5px; /*Letra del menu principal*/
+    background: repeat-x;
+}
+#menu ul.topnav li {
+    float: left;
+    margin: 0;  
+    padding: 0 15px 0 0;
+    position: relative; 
+}
+#menu ul.topnav li a{
+    padding: 10px 5px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    float: left;
+}
+#menu ul.topnav li a:hover{/*Al poner el mouse en elmenu se hace verde*/
+color:#80FF00;
+    background: no-repeat center top;
+}
+.footer
+{
+    width:auto;
+    height:20px;
+    text-align:center;
+}

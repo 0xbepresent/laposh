@@ -1,0 +1,60 @@
+.widget {
+width: auto;
+margin: 20px;
+padding: 10px;
+background: #f3f1eb;
+border: 1px solid #dedbd1;
+margin-bottom: 15px;
+}
+
+	.widget a {
+	color:#5E610B;
+	text-decoration: none;
+	}
+	
+	.widget a:hover {
+	color:#243B0B;
+	text-decoration: none;
+	}
+	.widget a:visited {
+	color:#38610B;
+	text-decoration: none;
+	}
+
+	.tabnav li {
+	display: inline;
+	padding-right: 1px;
+	}
+	
+		.tabnav li a {
+		text-decoration: none;
+		/*text-transform: uppercase;*//*Para poner en mayusculas*/
+		color: #000000;
+		font-weight: bold;
+		padding: 4px 6px;
+		outline: none;
+		}
+		
+		.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {
+		background: #E6E6E6; /*En el nombre de las columnas*/
+		border: 1px solid #dedbd1;
+		color: #5FB404;
+		text-decoration: none;
+		}
+		
+	.tabdiv {
+	margin-top: 2px;
+	background: #fff;
+	border: 1px solid #dedbd1;
+	padding: 5px;
+	}
+	
+	.tabdiv c
+	{
+	color: #000000;
+		font-weight: bold;	
+	}
+	.ui-tabs-hide {
+		display: none;
+	}
+

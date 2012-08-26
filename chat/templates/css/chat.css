@@ -1,0 +1,76 @@
+#wrapper{
+	/*margin:2px 40px 10px 10px;*/
+	margin:0 auto;
+	padding-bottom:25px;
+	background:#F2FBEF;
+	width:1000px;
+	height: auto;
+	border:1px solid #E6E6E6; 
+	border-radius: 6px;
+	box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #F2FBEF inset;
+}
+
+#chat-camera{
+	text-align:left;
+	margin:0 auto;
+	margin-bottom:5px;
+	padding:10px;
+	background:#fff;
+	height:315px;
+	width:950px;
+	border:1px solid #E6E6E6;
+	overflow:auto; 
+}
+.chat-camara-izquierda{
+	border:1px solid #E6E6E6;
+	width:420px;
+	height:280px;
+	float:left;
+}
+.chat-camara-derecha{
+	border:1px solid #E6E6E6;
+	width:420px;
+	height:280px;
+	float:right;
+}
+
+#log {
+	text-align:left;
+	font-size: 8px;
+	margin:0 auto;
+	margin-bottom:10px;
+	padding:10px;
+	background:#fff;
+	height:70px;
+	width:950px;
+	border:1px solid #E6E6E6;
+	overflow:auto; 
+}
+ 
+#chat-msg{
+	margin:0 auto;
+	height:auto;
+	width:970px;
+	overflow:auto; 
+} 
+#entry {
+	margin: 0 auto;
+	background:#fff;
+	width:970px;
+	height:50px;
+	resize: none;
+	border:1px solid #E6E6E6; 
+	
+}
+ 
+#submit { width: 60px; }
+ 
+.error { color: #ff0000; }
+ 
+.welcome { float:left; }
+ 
+.logout { float:right; }
+ 
+.msgln { margin:0 0 2px 0; }
+ 
+ 

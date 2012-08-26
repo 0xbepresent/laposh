@@ -1,0 +1,32 @@
+{%extends 'base.html' %}
+{% block titulo %}Principal{% endblock %}
+{%block contenido %}
+            <ul class="tabnav"> <!--nombre de las columnas -->
+                <li><a href="#inicio">Inicio</a></li>
+                <!--<li><a href="#crea">Crear sala</a></li>-->
+                <div class='sesion-usuario'>
+                </div>
+            </ul>
+            <div id="inicio" class="tabdiv">
+                <ul><br>
+                  <p><h1>Bienvenido a Fanfeando</h1><br>Lugar donde podras Chatear viendo sus rostros en vivo. Necesitamos <b>Arte, Minimalista, Bonito, Sencillo, Alucina.</b></p><br>
+                  <h1>Salas </h1>
+                  <div id = 'contenedor-salas'>
+                    <div id = 'caja-sala'>
+                        <div id = 'caja-sala-interna'>
+                        <p>Imagen de la caja</p>
+                        </div>
+                        <a href='{% url chat.views.index %}'> 
+                          <h1>Sala libre</h1>
+                        </a>
+                        <p>Platica con gente bien chevere :D.</p>
+                    </div>
+                </div>
+                </ul>
+             </div>         
+            <!--<div id="crea" class="tabdiv">
+                    <ul>
+                        <p>El usuario podra crear una sala de chat siendo el Administrador de esta sala.</p>
+                    </ul>
+             </div> -->
+{% endblock %}

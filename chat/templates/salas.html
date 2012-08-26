@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block titulo %} Chat! {% endblock %}
+{% block estilo_css %}
+  <link rel='stylesheet' type='text/css' href='/chat.css' >
+{% endblock %}
+{% block js %}
+    <script type='text/javascript'>
+        // daemon start time
+        var starttime;
+        // daemon memory usage
+        var rss;
+        var CONFIG = {
+            debug: false,
+            nick: "{{nick}}",
+            id: {{id}},
+            id_next: 0,
+            last_message_time: 1,
+            focus: true,
+            unread: 0,
+            connectUnion: 0,
+            nearID: 0,
+            farID: 0
+        }
+        rss = "{{rss}}";
+        starttime = {{starttime}};
+        starttime   = new Date(starttime);
+    </script>
+    <script type='text/javascript' src='/chatonLoad.js'></script>
+{% endblock %}
+{% block contenido %}
+      <ul class="tabnav"> <!--nombre de las columnas -->
+              <li><a href="#sala">Sala</a></li>
+              <div class='sesion-usuario'>
+                  Usuario: {{nick}} | 
+                  Total de usuarios: <label id='usersLink'></label>
+              </div>
+    </ul>
+    <div id="sala" class="tabdiv">
+      <ul>
+      <div id='wrapper'>
+        <br>
+        <div id='chat-camera'>
+          <div class='chat-camara-izquierda'>
+           <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                id="video1" width="420" height="300"
+                codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+                <param name="movie" value="/VideoIO.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#000000" />
+                <param name="allowFullScreen" value="true" />
+                <param name="allowScriptAccess" value="always" />
+                <param name="flashVars" value="controls=true" />
+                <embed src="/VideoIO.swf" quality="high" bgcolor="#000000"
+                    width="420" height="300" name="video1" align="middle"
+                    play="true" loop="false" quality="high"
+                    allowFullScreen="true"
+                    allowScriptAccess="always"
+                    flashVars="controls=true"
+                    type="application/x-shockwave-flash"
+                    pluginspage="http://www.adobe.com/go/getflashplayer">
+                </embed>
+            </object>
+             <br/>
+            <input value="Publicar Video" type="button" 
+                onclick="publicarVideo()"/>
+            <input value="reset" type="button" 
+                onclick="getFlashMovie('video1').setProperty('src', null)"/>
+          </div>
+          <div class='chat-camara-derecha'>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                id="video2" width="420" height="300"
+                codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+                <param name="movie" value="/VideoIO.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#000000" />
+                <param name="allowFullScreen" value="true" />
+                <param name="allowScriptAccess" value="always" />
+                <param name="flashVars" value="controls=true" />
+                <embed src="/VideoIO.swf" quality="high" bgcolor="#000000"
+                    width="420" height="300" name="video2" align="middle"
+                    play="true" loop="false" quality="high"
+                    allowFullScreen="true"
+                    allowScriptAccess="always"
+                    flashVars="controls=true"
+                    type="application/x-shockwave-flash"
+                    pluginspage="http://www.adobe.com/go/getflashplayer">
+                </embed>
+            </object>
+          </div>
+        </div>
+        <div id='log'>
+            <table class="message"><tr><td class="date">20:20</td><td valign="top" class="nick">catalystmediastu</td>
+             <td class="msg-text">Hola
+             </td>
+            </tr></table>
+        </div>
+        <div id='chat-msg'>
+         
+          <textarea  tabindex="1" id='entry' ></textarea><br><br>
+            <div style = 'float:right'>
+                <a id = 'nextUsu' href ='#' style="font-size:14px; font-weight: bold;">Next</a><br>
+                <label id = 'connectUnion'></label>
+            </div>
+        </div>
+        <div id= "msjRespuesta">
+        </div>
+      </div>
+      </ul>
+    </div>
+
+    <!--Chat Texto-->
+    <div id="toolbar">
+        <ul id="status">
+          <!--<li><a id="usersLink" href="#">5 users</a></li>-->
+          <!--<li>uptime: <span id="uptime">?</span></li>-->
+          <!--<li>memory: <span id="rss">?</span>mb RSS</li>-->
+          <!--<li><span id="connectUnion">?</span></li>-->
+        </ul>
+        <div id='todos'>
+        </div>
+    </div>
+{% endblock %}
