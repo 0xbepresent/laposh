@@ -462,6 +462,9 @@ $(document).ready(function() {
     //Jugemos a la ruleta
     //Evento que se ejecuta quien dios click a 'next'
     $("#nextUsu").click(function(){
+      //Quitar la camara 2
+      getFlashMovie('video2').setProperty('src', null);
+      //Restablecer variables
       (CONFIG.id_next == 0) ? idEnv = CONFIG.id : idEnv = CONFIG.id_next;
       $.ajax({
         cache:false,
@@ -495,6 +498,26 @@ $(document).ready(function() {
       return false;
       first_poll = true;
       longPoll();
+    });
+
+
+    /**********************************
+    Controlando salida de los usuarios
+    ************************************/
+    $("#inicio").click(function(){
+        jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
+    });
+    $("#acerca").click(function(){
+        jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
+    });
+    $("#contacto").click(function(){
+        jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
+    });
+    $("#priv").click(function(){
+        jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
+    });
+    $("#terminos").click(function(){
+        jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
     });
 });
 
