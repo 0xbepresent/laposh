@@ -336,7 +336,7 @@ function longPoll(data){
                     //Actualizamos los idCONFIG de cada navegador, para que
                     //cada quien diriga su MSJ con su cada cual
                     //alert("Llega ID"+message.id_nick+"Llega NextID "+message.nick_next);
-                      if (CONFIG.id == message.nick_next){
+                    if (CONFIG.id == message.nick_next){
                         //Se ejecuta quien recibe el boton next
                         CONFIG.id_next = message.id_nick;
                         CONFIG.farID = message.nearid;
@@ -354,8 +354,12 @@ function longPoll(data){
                       }
                       //alert("Mi ID:"+CONFIG.id+" mi nextID "+ CONFIG.id_next);
                     //userUnion(message.nick, message.timestamp);
-                    if(CONFIG.id_next == 0 || CONFIG.id_next == CONFIG.id)
+                    if(CONFIG.id_next == 0 || CONFIG.id_next == CONFIG.id){
                       msg = "No conectado";
+                      //Quitar la camara 2
+                      alert(1);
+                      getFlashMovie('video2').setProperty('src', null);
+                    }
                     else
                       msg = "Conectado con un usuario";
 
@@ -462,8 +466,6 @@ $(document).ready(function() {
     //Jugemos a la ruleta
     //Evento que se ejecuta quien dios click a 'next'
     $("#nextUsu").click(function(){
-      //Quitar la camara 2
-      getFlashMovie('video2').setProperty('src', null);
       //Restablecer variables
       (CONFIG.id_next == 0) ? idEnv = CONFIG.id : idEnv = CONFIG.id_next;
       $.ajax({
@@ -486,12 +488,10 @@ $(document).ready(function() {
           if(data.status != 0){
             CONFIG.id_next = data.id_next;
             CONFIG.connectUnion = 1;
-
           }else{
             CONFIG.id_next = 0;
             CONFIG.connectUnion = 0;
           }
-
           //alert("ID next" + CONFIG.id_next + " Status :"+ data.status );
         }
       });
