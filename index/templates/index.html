@@ -2,31 +2,55 @@
 {% block titulo %}Principal{% endblock %}
 {%block contenido %}
             <ul class="tabnav"> <!--nombre de las columnas -->
-                <li><a href="#inicio">Inicio</a></li>
-                <!--<li><a href="#crea">Crear sala</a></li>-->
+                <li><a href="#tabinicio">Inicio</a></li>
+                <li><a href="#tabsalas">Salas</a></li>
                 <div class='sesion-usuario'>
                 </div>
             </ul>
-            <div id="inicio" class="tabdiv">
+            <div id="tabinicio" class="tabdiv">
                 <ul><br>
-                  <p><h1>Bienvenido a Fanfeando</h1><br>Lugar donde podras Chatear viendo sus rostros en vivo. Necesitamos <b>Arte, Minimalista, Bonito, Sencillo, Alucina.</b></p><br>
-                  <h1>Salas </h1>
-                  <div id = 'contenedor-salas'>
-                    <div id = 'caja-sala'>
-                        <div id = 'caja-sala-interna'>
-                        <p>Imagen de la caja</p>
-                        </div>
-                        <a href='{% url chat.views.index %}'> 
-                          <h1>Sala libre</h1>
-                        </a>
-                        <p>Platica con gente bien chevere.</p>
-                    </div>
-                </div>
+                  <p><h1>Bienvenido a Fanfeando</h1><br>Lugar donde podras Chatear viendo sus rostros en vivo. Necesitamos <b>Arte, Minimalista, Bonito, Sencillo, Alucina.</b></p><br><br>
+                  <h1>Conoce</h1><br>
+                  Conoce a gente nueva con tus mismos intereses. Conecta con
+                  tu cuenta de twitter y Vuala!!
+                  <br><br><br>
+                  <h1>Diversidad</h1><br>
+                  En una cantidad variada de usuarios
+                  <br><br><br>
+                  <h1>Listado de mensajes</h1><br>
+                  Aunque no e encuentres te pueden dejar un mensaje padre!
+                  <br><br><br>
+                  <h1>Secreto</h1><br>
+                  Mediante un algoritmo en AES
+
                 </ul>
              </div>         
-            <!--<div id="crea" class="tabdiv">
-                    <ul>
+            <div id="tabsalas" class="tabdiv">
+                    <ul><br>
+                      <h1>Salas </h1>
                         <p>El usuario podra crear una sala de chat siendo el Administrador de esta sala.</p>
+                        <div id = 'contenedor-salas'>
+                          <div id = 'caja-sala'>
+                              <div id = 'caja-sala-interna'>
+                              <p>Imagen de la caja se pretende sea una soncronizacion de todos los que estana actualmente</p>
+                              </div>
+                              <a href='{% url chat.views.index %}'> 
+                                <h1>Sala libre</h1>
+                              </a>
+                              <p>Platica con gente bien chevere.</p>
+                          </div>
+
+                          <!--<div id = 'caja-sala'>
+                              <div id = 'caja-sala-interna'>
+                              <p>Imagen de la caja se pretende sea una soncronizacion de todos los que estana actualmente</p>
+                              </div>
+                              <a href='{% url chat.views.index %}'> 
+                                <h1>Tweet chat!</h1>
+                              </a>
+                              <p>Platica con gente del mundo Twitter!!.</p>
+                          </div>-->
+
+                      </div>
                     </ul>
-             </div> -->
+             </div> 
 {% endblock %}
