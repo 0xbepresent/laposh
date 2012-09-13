@@ -357,7 +357,7 @@ function longPoll(data){
                     if(CONFIG.id_next == 0 || CONFIG.id_next == CONFIG.id){
                       msg = "No conectado";
                       //Quitar la camara 2
-                      alert(1);
+                      //alert(1);
                       getFlashMovie('video2').setProperty('src', null);
                     }
                     else
