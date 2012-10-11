@@ -389,7 +389,8 @@ function longPoll(data){
                   connectionUnion: CONFIG.connectUnion
                   }
            , error: function () {
-               addMessage("", "Long poll error. Conectando...", new Date(), "error");
+              //Error
+               //addMessage("", "Long poll error. Conectando...", new Date(), "error");
                transmission_errors += 1;
                //don't flood the servers on error, wait 10 seconds before retrying
                setTimeout(longPoll, 10*1000);
