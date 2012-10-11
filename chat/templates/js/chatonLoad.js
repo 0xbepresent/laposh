@@ -202,7 +202,7 @@ function addMessage (from, text, time, _class) {
 
 //handles another person joining chat
 function userJoin(nick, timestamp) {
-  //put it in the stream
+  //put it in the stream.
   //addMessage(nick, "joined", timestamp, "join");
   //if we already know about this user, ignore it
   for (var i = 0; i < nicks.length; i++)
