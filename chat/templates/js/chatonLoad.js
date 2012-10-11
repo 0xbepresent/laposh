@@ -279,10 +279,10 @@ var first_poll = true;
 
 function longPoll(data){
   //CONFIG.connectUnion = 1;
-    if(transmission_errors > 2){
+    /*if(transmission_errors > 5){
         alert("Error de transmision");
         return;
-    }
+    }*/
     if (data && data.rss) {
         rss = data.rss;
         updateRSS();
@@ -389,7 +389,7 @@ function longPoll(data){
                   connectionUnion: CONFIG.connectUnion
                   }
            , error: function () {
-               addMessage("", "long poll error. trying again...", new Date(), "error");
+               addMessage("", "Long poll error. Conectando...", new Date(), "error");
                transmission_errors += 1;
                //don't flood the servers on error, wait 10 seconds before retrying
                setTimeout(longPoll, 10*1000);
