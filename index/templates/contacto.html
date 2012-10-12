@@ -1,0 +1,33 @@
+{%extends 'base.html' %}
+{% block titulo %}Principal{% endblock %}
+{% block js %}
+    <script type='text/javascript'>
+        function focusIt(){
+          var usu = document.getElementById("nombre"); 
+          usu.focus(); 
+        }
+        onload = focusIt;
+    </script>
+{% endblock %}
+{%block contenido %}
+            <ul class="tabnav"> <!--nombre de las columnas -->
+                <li><a href="#tabinicio">Contácto</a></li>
+            </ul>
+            <div id="tabinicio" class="tabdiv">
+                <ul><br>
+                  <p><h1>Contácanos </h1><br>Puedes enviarnos un mail para
+                    diversos aspectos, sugerencias, blabla.
+                    <br><br>
+                    <div class='formulario'>
+                      <label>Nombre:</label> <input type='text' id='nombre' size='35' /><br>
+                      <label>Web:</label> <input type='text' id='web' size='35'/><br>
+                      <label>Asunto:</label> <input type='text' id='asunto' size='35'/><br>
+                      <label>Mensaje:</label> 
+                      <textarea  tabindex="1" rows='6' cols='40'></textarea>
+                      <br>
+                        <input type='submit' value='Enviar'>
+                    </div>
+                  </p><br><br>
+                </ul>
+             </div>         
+{% endblock %}

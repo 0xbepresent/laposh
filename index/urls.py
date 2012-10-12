@@ -2,6 +2,8 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('index.views', 
         url(r'^$', 'index'),
+        url(r'^acerca$','acerca'),
+        url(r'^contacto$','contacto'),
         url(r'^base.css$','baseCSS'),
         url(r'^tabs.css$','tabsCSS'),
         url(r'^salas.css$','salasCSS'),

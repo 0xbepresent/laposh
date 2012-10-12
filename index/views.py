@@ -5,6 +5,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 def index(request):
     return render_to_response('index.html', context_instance = RequestContext(request))
 
+def acerca(request):
+    return render_to_response('acerca.html', context_instance = RequestContext(request))    
+
+def contacto(request):
+    return render_to_response('contacto.html', context_instance = RequestContext(request))    
+
 #Manejo de STATIC FILES
 def baseCSS(request):
     #return render_to_response('css/base.css', context_instance=RequestContext(request))   

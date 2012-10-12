@@ -2,9 +2,9 @@
 width: auto;
 margin: 20px;
 padding: 10px;
-background: #f3f1eb;
+background: #FBF2EF;
 border: 1px solid #dedbd1;
-margin-bottom: 15px;
+margin-bottom: 5px;
 }
 
 	.widget a {
@@ -21,9 +21,13 @@ margin-bottom: 15px;
 	text-decoration: none;
 	}
 
+	.tabnav{
+		padding: 0px 13px;
+	}
+
 	.tabnav li {
 	display: inline;
-	padding-right: 1px;
+	padding: 1px;
 	}
 	
 		.tabnav li a {
@@ -31,20 +35,20 @@ margin-bottom: 15px;
 		/*text-transform: uppercase;*//*Para poner en mayusculas*/
 		color: #000000;
 		font-weight: bold;
-		padding: 4px 6px;
+		padding: 1px 1px;
 		outline: none;
 		}
 		
 		.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {
 		background: #E6E6E6; /*En el nombre de las columnas*/
 		border: 1px solid #dedbd1;
-		color: #5FB404;
+		color: #FA8258;
 		text-decoration: none;
 		}
 		
 	.tabdiv {
 	margin-top: 2px;
-	background: #fff;
+	background: #FAFAFA;
 	border: 1px solid #dedbd1;
 	padding: 5px;
 	}
@@ -52,7 +56,7 @@ margin-bottom: 15px;
 	.tabdiv c
 	{
 	color: #000000;
-		font-weight: bold;	
+	font-weight: bold;	
 	}
 	.ui-tabs-hide {
 		display: none;
