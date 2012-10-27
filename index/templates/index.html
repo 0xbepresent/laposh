@@ -1,11 +1,11 @@
 {%extends 'base.html' %}
 {% block titulo %}Principal{% endblock %}
 {%block contenido %}
-            <ul class="tabnav"> <!--nombre de las columnas -->
+                <ul class="tabnav">
                 <li><a href="#tabinicio">Inicio</a></li>
-                <li><a href="#tabsalas">Salas</a></li>
-                <div class='sesion-usuario'>
-                </div>
+                <!--<li><a href="#tabsalas">Salas</a></li>-->
+                <!--<div class='sesion-usuario'>
+                </div>-->
             </ul>
             <div id="tabinicio" class="tabdiv">
                 <ul><br>
@@ -16,7 +16,7 @@
                   <br><br><br>
                 </ul>
              </div>         
-            <div id="tabsalas" class="tabdiv">
+            <!--<div id="tabsalas" class="tabdiv">
                     <ul><br>
                       <h1>Salas </h1>
                         <p>Selecciona alguna de la salas disponibles.</p>
@@ -25,21 +25,13 @@
                               <div id = 'caja-sala-interna'>
                               <p>Imagen de la caja se pretende sea una soncronizacion de todos los que estana actualmente</p>
                               </div>
-                              <a href='{% url chat.views.index %}'> 
+                              <a href='{% url chat.views.index %} '> 
                                 <h1>Sala libre</h1>
                               </a>
                               <p>Navega con gente de diversos estilos.</p>
                           </div>
-                          <!--<div id = 'caja-sala'>
-                              <div id = 'caja-sala-interna'>
-                              <p>Imagen de la caja se pretende sea una soncronizacion de todos los que estana actualmente</p>
-                              </div>
-                              <a href='{% url chat.views.index %}'> 
-                                <h1>Tweet chat!</h1>
-                              </a>
-                              <p>Platica con gente del mundo Twitter!!.</p>
-                          </div>-->
                       </div>
                     </ul>
-             </div>
-{% endblock %}
+             </div>-->
+  {% endblock %}
+  

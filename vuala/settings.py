@@ -128,3 +128,10 @@ INSTALLED_APPS = (
     "index",
 )
 
+#Configuracion para el envio de e-mails
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'arensiatik@gmail.com'
+EMAIL_HOST_PASSWORD = 'tambobulbi159'
+EMAIL_PORT = 587
+

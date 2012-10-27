@@ -508,6 +508,9 @@ $(document).ready(function() {
     $("#inicio").click(function(){
         jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
     });
+    $("#salas").click(function(){
+        jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
+    });
     $("#acerca").click(function(){
         jQuery.post("/part/", {id: CONFIG.id}, function (data) { }, "json");
     });

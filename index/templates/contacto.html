@@ -7,6 +7,7 @@
           usu.focus(); 
         }
         onload = focusIt;
+        focusIt();
     </script>
 {% endblock %}
 {%block contenido %}
@@ -15,18 +16,28 @@
             </ul>
             <div id="tabinicio" class="tabdiv">
                 <ul><br>
-                  <p><h1>Contácanos </h1><br>Puedes enviarnos un mail para
-                    diversos aspectos, sugerencias, blabla.
-                    <br><br>
-                    <div class='formulario'>
-                      <label>Nombre:</label> <input type='text' id='nombre' size='35' /><br>
-                      <label>Web:</label> <input type='text' id='web' size='35'/><br>
-                      <label>Asunto:</label> <input type='text' id='asunto' size='35'/><br>
-                      <label>Mensaje:</label> 
-                      <textarea  tabindex="1" rows='6' cols='40'></textarea>
-                      <br>
-                        <input type='submit' value='Enviar'>
-                    </div>
+                  <p><h1>Contáctanos </h1>
+                    <br>
+                    {% if info_enviado %}
+                      Gracias por contáctarnos, nos comunicaremos contigo
+                      en breve.
+                    {% else %}
+                      <br>Puedes enviarnos un mail para
+                      diversos aspectos, sugerencias, recomendaciones.
+                      <br><br>
+                      <div class='formulario'>
+                        <form action='contacto' method='post'>
+                          <label>Nombre:</label> <input type='text' name = 'nombre' id='nombre' size='35' /><br>
+                          <label>E-mail:</label> <input type='text' name='email' id='email' size='35' /><br>
+                          <label>Web:</label> <input type='text' name='web' id='web' size='35'/><br>
+                          <label>Asunto:</label> <input type='text' name='asunto' id='asunto' size='35'/><br>
+                          <label>Mensaje:</label> 
+                          <textarea  tabindex="1" rows='6' cols='40' id='mensaje' name='mensaje'></textarea>
+                          <br>
+                            <input type='submit' value='Enviar'>
+                          </form>
+                      </div>
+                    {% endif %}
                   </p><br><br>
                 </ul>
              </div>         

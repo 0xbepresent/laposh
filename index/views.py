@@ -1,6 +1,8 @@
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt
+from django.core.mail import EmailMessage
 
 def index(request):
     return render_to_response('index.html', context_instance = RequestContext(request))
@@ -8,8 +10,36 @@ def index(request):
 def acerca(request):
     return render_to_response('acerca.html', context_instance = RequestContext(request))    
 
+@csrf_exempt
 def contacto(request):
-    return render_to_response('contacto.html', context_instance = RequestContext(request))    
+    info_enviado = False
+    nombre = ''
+    email = ''
+    web = ''
+    asunto = ''
+    mensaje = ''
+    if request.method == "POST":
+        info_enviado = True
+        nombre = request.POST['nombre']
+        email = request.POST['email']
+        web = request.POST['web']
+        asunto = request.POST['asunto']
+        mensaje = request.POST['mensaje']
+        titulo = 'Mensaje enviado desde fanfeando'
+        contenido = "Autor: "+nombre+"\n"
+        contenido += "Email: "+email+"\n"
+        contenido += "web: "+ web + "\n"
+        contenido += "Asunto: "+asunto+"\n"
+        contenido += "Mensaje: " + mensaje + "\n"
+        correo = EmailMessage(titulo, contenido, to=['arensiatik@hotmail.com'])
+        correo.send()
+        
+    else:
+        info_enviado = False
+    cmx = {
+        'info_enviado': info_enviado,
+    }
+    return render_to_response('contacto.html', cmx, context_instance = RequestContext(request))    
 
 #Manejo de STATIC FILES
 def baseCSS(request):

@@ -9,31 +9,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> 
     <script type='text/javascript' src='/tabs.js'></script>
     <script type='text/javascript' src='/jquery-ui-personalized.js'></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $("#acerca").click(function(){
-            $("#tabvani").fadeOut("slow", function(){
-                var href = 'acerca';
-                $("#tabvani").fadeIn("slow");
-                $("body").load(href);
-            });
-        });
-        $("#contacto").click(function(){
-            $("#tabvani").fadeOut("slow", function(){
-                var href = 'contacto';
-                $("#tabvani").fadeIn("slow");
-                $("body").load(href);
-            });
-        });
-        $("#salas").click(function(){
-            $("#tabvani").fadeOut("slow", function(){
-                var href = 'chat';
-                $("#tabvani").fadeIn("slow");
-                $("body").load(href);   
-            });
-        });
-    });
-    </script>
     {% block js%}{% endblock %}
 </head>
 <body>
@@ -47,10 +22,10 @@
                 <div id='header-menu'>
                     <ul class = 'topnav'>
                         <li><a id = 'inicio' href = '/'>Inicio </a></li>
-                        <li><a id = 'salas' href='#'>
+                        <li><a id = 'salas' href='{% url chat.views.index %}'>
                             Salas</a></li>
-                        <li><a id = 'acerca' href='#'>Acerca de</a></li>
-                        <li><a id = 'contacto' href='#'>Contáctanos</a></li>
+                        <li><a id = 'acerca' href='/acerca'>Acerca de</a></li>
+                        <li><a id = 'contacto' href='/contacto'>Contáctanos</a></li>
                     </ul>
                 </div>
             </div>

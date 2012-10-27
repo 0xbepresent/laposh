@@ -129,7 +129,7 @@ a:active {
     margin-bottom: 1px;
 }
 .formulario input[type='text'], .formulario input[type='password'], .formulario textarea {
-    padding: 7px 6px;
+    padding: 3px 6px;
     width: auto;
     border: 1px solid #F2FBEF;
     resize: none;
