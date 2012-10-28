@@ -13,7 +13,8 @@
     $(document).ready(function(){
         $("#acerca").click(function(){
             $("#tabvani").fadeOut("slow", function(){
-                $("#tabvani").fadeIn("slow", function(){
+                $("#tabvani").html("");
+                $("#tabvani").fadeIn("fast", function(){
                     var href = 'acerca';
                     $("body").load(href);    
                 });
