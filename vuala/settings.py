@@ -127,7 +127,6 @@ INSTALLED_APPS = (
     "chat",
     "index",
 )
-
 #Configuracion para el envio de e-mails
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
