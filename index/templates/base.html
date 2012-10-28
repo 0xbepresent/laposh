@@ -13,23 +13,26 @@
     $(document).ready(function(){
         $("#acerca").click(function(){
             $("#tabvani").fadeOut("slow", function(){
-                var href = 'acerca';
-                //$("#tabvani").fadeIn("slow");
-                $("body").load(href);
+                $("#tabvani").fadeIn("slow", function(){
+                    var href = 'acerca';
+                    $("body").load(href);    
+                });
             });
         });
         $("#contacto").click(function(){
             $("#tabvani").fadeOut("slow", function(){
-                var href = 'contacto';
-                $("#tabvani").fadeIn("slow");
-                $("body").load(href);
+                $("#tabvani").fadeIn("slow", function(){
+                    var href = 'contacto';
+                    $("body").load(href);
+                });
             });
         });
         $("#salas").click(function(){
             $("#tabvani").fadeOut("slow", function(){
-                var href = 'chat';
-                $("#tabvani").fadeIn("slow");
-                $("body").load(href);   
+                $("#tabvani").fadeIn("slow", function(){
+                    var href = 'chat';
+                    $("body").load(href);   
+                });
             });
         });
     });
