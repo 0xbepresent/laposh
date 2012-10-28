@@ -1,6 +1,7 @@
 {%extends 'base.html' %}
 {% block titulo %}Principal{% endblock %}
 {%block contenido %}
+<div id = 'indexDes' style='display:block;'>
                 <ul class="tabnav">
                 <li><a href="#tabinicio">Inicio</a></li>
                 <!--<li><a href="#tabsalas">Salas</a></li>-->
@@ -33,5 +34,72 @@
                       </div>
                     </ul>
              </div>-->
+</div>
+<div id = 'salasDes' style='display:none;'>
+<ul class="tabnav"> <!--nombre de las columnas -->
+                <li><a href="#registro">Registro</a></li>
+        </ul>
+        <div id ='registro' class = 'tabdiv'>
+            <div id='formAjax'> 
+                <ul><br>
+                <h1>Introduce tu nombre de usuario para entrar a la sala.</h1><br><br>
+                <form class='formulario' method="post" action="ingresar/">
+                    <div><label>Usuario: </label>
+                        <input type="text" name="usuario" id="usuario" value='' size='25'/>
+                    </div>
+                    <div style='text-align:right;' >
+                        <input type="submit" name="connect" id = 'connect' value="Enviar" />
+                    </div>
+                </form>
+                </ul>
+            </div>
+    </div>
+</div>
+<div id = 'acercaDes' style='display:none;'>
+  <ul class="tabnav"> <!--nombre de las columnas -->
+                <li><a href="#tabinicio">Acerca de</a></li>
+            </ul>
+            <div id="tabinicio" class="tabdiv">
+                <ul><br>
+                  <p><h1>¿Quiénes somos? </h1><br>Actualmente el proyecto
+                    se encuentra en fase inicial. El equipo es pequeño
+                    y si lo deseas puedes unirte.<br>
+                    <a href='contacto'>Envianos</a> tus referencias y puedas colaborar al proyecto.
+                  </p><br><br>
+                </ul>
+             </div>         
+</div>
+<div id = 'contactoDes' style='display:none;'>
+  <ul class="tabnav"> <!--nombre de las columnas -->
+                <li><a href="#tabinicio">Contácto</a></li>
+            </ul>
+            <div id="tabinicio" class="tabdiv">
+                <ul><br>
+                  <p><h1>Contáctanos </h1>
+                    <br>
+                    {% if info_enviado %}
+                      Gracias por contáctarnos, nos comunicaremos contigo
+                      en breve.
+                    {% else %}
+                      <br>Puedes enviarnos un mail para
+                      diversos aspectos, sugerencias, recomendaciones.
+                      <br><br>
+                      <div class='formulario'>
+                        <form action='contacto' method='post'>
+                          <label>Nombre:</label> <input type='text' name = 'nombre' id='nombre' size='35' /><br>
+                          <label>E-mail:</label> <input type='text' name='email' id='email' size='35' /><br>
+                          <label>Web:</label> <input type='text' name='web' id='web' size='35'/><br>
+                          <label>Asunto:</label> <input type='text' name='asunto' id='asunto' size='35'/><br>
+                          <label>Mensaje:</label> 
+                          <textarea  tabindex="1" rows='6' cols='40' id='mensaje' name='mensaje'></textarea>
+                          <br>
+                            <input type='submit' value='Enviar'>
+                          </form>
+                      </div>
+                    {% endif %}
+                  </p><br><br>
+                </ul>
+             </div>         
+</div>
   {% endblock %}
   

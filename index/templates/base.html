@@ -11,7 +11,7 @@
     <script type='text/javascript' src='/jquery-ui-personalized.js'></script>
     <script type="text/javascript">
     $(document).ready(function(){
-        $("#acerca").click(function(){
+        /*$("#acerca").click(function(){
             $("#tabvani").fadeOut("slow", function(){
                 $("#tabvani").html("");
                 $("#tabvani").fadeIn("slow", function(){
@@ -33,6 +33,39 @@
                 $("#tabvani").fadeIn("slow", function(){
                     var href = 'chat';
                     $("body").load(href);   
+                });
+            });
+        });*/
+        $("#acerca").click(function(){
+            $("#indexDes").fadeOut("slow", function(){
+                $("#salasDes").fadeOut("slow", function(){
+                    $("#contactoDes").fadeOut("slow", function(){
+                        $("#acercaDes").fadeIn("slow");
+                    });
+                });
+            });
+        });
+
+        $("#contacto").click(function(){
+            $("#indexDes").fadeOut("slow", function(){
+                $("#salasDes").fadeOut("slow", function(){
+                    $("#acercaDes").fadeOut("slow", function(){
+                        $("#contactoDes").fadeIn("slow");
+                        var usu = document.getElementById("nombre"); 
+                        usu.focus(); 
+                    });
+                });
+            });
+        });
+
+        $("#salas").click(function(){
+            $("#indexDes").fadeOut("slow", function(){
+                $("#contactoDes").fadeOut("slow", function(){
+                    $("#acercaDes").fadeOut("slow", function(){
+                        $("#salasDes").fadeIn("slow");
+                        var usu = document.getElementById("usuario"); 
+                        usu.focus(); 
+                    });
                 });
             });
         });
