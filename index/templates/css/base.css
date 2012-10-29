@@ -141,6 +141,38 @@ a:active {
     box-shadow: 0 0 0 3px #F6CECE;
 }
 
+.button {
+   border-top: 1px solid #ffffff;
+   background: #debaba;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ccbcb7), to(#debaba));
+   background: -webkit-linear-gradient(top, #ccbcb7, #debaba);
+   background: -moz-linear-gradient(top, #ccbcb7, #debaba);
+   background: -ms-linear-gradient(top, #ccbcb7, #debaba);
+   background: -o-linear-gradient(top, #ccbcb7, #debaba);
+   padding: 3px 6px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 3px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #000000;
+   font-size: 12px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #d49f9f;
+   background: #d49f9f;
+   color: #000000;
+   }
+.button:active {
+   border-top-color: #db724c;
+   background: #db724c;
+   }
+
 .footer
 {
     width:auto;
