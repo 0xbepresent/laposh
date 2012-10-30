@@ -26,6 +26,10 @@ a:active {
     color:#FA8258;
 }
 
+a:focus {
+  outline:0px;
+}
+
 #contenedor{
     float: center;
     background-color: #ffffff;
@@ -39,7 +43,7 @@ a:active {
     width:auto;
     height:auto;
     background-color:#FAFAFA;
-    margin:0px 100px 10px 100px;
+    margin:-20px 100px 10px 100px;
     float:center;
     padding:5px;
     line-height: 160%;
@@ -59,19 +63,19 @@ a:active {
 #slogan{
     font-family: "commersial_script";
     float:center;
-    margin: 30px 100px 100 px 130px;
-    height: 80px;
+    margin: 30px 0px 0px 0px;
+    height: auto;
     width: auto;
 }
 #slogan p 
 { 
-    padding: 2px 0 0 4px; 
+    padding: 20px 4px 0px 4px; 
     font: bold 90% monospace;
     font-size: 13px; 
     color: #BDBDBD; 
 }
 #slogan h1{
-    padding: 10px 0 0 4px;
+    padding: 0px 0px 0 125px;
     font-size: 54px;
     margin: 0;
     text-shadow: 1px 1px 1px #000;
@@ -81,7 +85,7 @@ a:active {
 #menu{
     width: auto;
     height: auto;
-    margin: -70px 0px 0px 800px;
+    margin: -25px 0px 0px 800px;
 }
 #menu .container{
     width:auto;
@@ -129,7 +133,7 @@ a:active {
     margin-bottom: 1px;
 }
 .formulario input[type='text'], .formulario input[type='password'], .formulario textarea {
-    padding: 3px 6px;
+    padding: 3px 4px;
     width: auto;
     border: 1px solid #F2FBEF;
     resize: none;
