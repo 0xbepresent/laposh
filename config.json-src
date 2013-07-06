@@ -1,0 +1,6 @@
+{
+	"email_server":{
+		"EMAIL_HOST_USER": 'Your_email@gmail.com',
+		"EMAIL_HOST_PASSWORD": 'yourpasswordemail'
+	}
+}

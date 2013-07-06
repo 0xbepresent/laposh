@@ -4,7 +4,11 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 import os
+from django.utils import simplejson
 RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
+file = open('%s/config.json' % (os.path.dirname(RUTA_PROYECTO)), 'r')
+conf = simplejson.loads(file.read())
+file.close()
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -130,7 +134,7 @@ INSTALLED_APPS = (
 #Configuracion para el envio de e-mails
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'arensiatik@gmail.com'
-EMAIL_HOST_PASSWORD = 'tambobulbi159'
+EMAIL_HOST_USER = conf['email_server']['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = conf['email_server']['EMAIL_HOST_PASSWORD']
 EMAIL_PORT = 587
 
